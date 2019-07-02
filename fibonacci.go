@@ -4,11 +4,12 @@ import "fmt"
 
 // fibonacci is a function that returns
 // a function that returns an int.
-func fibonacci() func(int) int {
-	sum := nil
-	return func(x int) int {
-		sum += x
-		return sum
+func fibonacci() func(y int) int {
+	y := 0
+	x := 1
+	return func(a int) int {
+		y += x
+		return y
 	}
 }
 
